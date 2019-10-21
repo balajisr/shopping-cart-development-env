@@ -1,0 +1,42 @@
+.checkout {
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color:#ddc9f5;
+    min-width: 350px;
+}
+.checkout-content, .checkout-btn {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    min-height: 63px;
+}
+.checkout-content {
+    margin-right: -5px;
+}
+.checkout-content p {
+    margin: 10px 0;
+    text-align: center;
+    margin-right: 10%;
+}
+.checkout-btn {
+    position: relative;
+    height: 100%;
+}
+.checkout-btn button {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    background-color: skyblue;
+    padding: 10px 15px;
+    border: 0;
+}
+.btnActBg {
+    background-color: #004363 !important;
+}

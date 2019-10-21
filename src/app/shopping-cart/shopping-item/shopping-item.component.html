@@ -1,0 +1,15 @@
+<div class="shopping-item">
+  <div class="shopping-item-left">
+    <img *ngIf="product" [src]="product.imageUrl" />
+    <p>{{ product.offerTxt }}</p>
+  </div>
+  <div class="shopping-item-right">
+    <p class="product-name"><a href="#">{{ product.productName }}</a></p>
+    <p class="brand-name"><a href="#">{{ product.brandName }}</a></p>
+    <p class="product-qty">{{ product.quantity }}</p>
+    <p class="mrp">{{ product.mrp }}</p>
+    <p class="price">Rs {{ product.price }}</p>
+    <p><button [disabled]="btnEnable()" (click)="decreaseQty()" [ngClass]="{'btn-inactive-bg':btnEnable()}" class="counter-btn">-</button> {{ itemQty }} <button (click)="increaseQty()" class="counter-btn">+</button></p>
+    <p><button class="add-cart" [disabled]="btnEnable()" [ngClass]="{'btn-inactive-bg':btnEnable()}">ADD TO CART</button></p>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<app-shopping-item 
+*ngFor="let productItem of productItems" 
+[product]="productItem" 
+(dataAdded)="addedQty($event)"
+(dataSub)="subtractQty($event)"></app-shopping-item>
+<app-transaction-modal *ngIf="checkout" [checkout]="amount"></app-transaction-modal>
+<div class="checkout">
+  <div class="checkout-content">
+    <p><strong>Quantity :</strong> {{ totalQty }}</p>
+    <p><strong>Total :</strong> {{ totalAmount }}</p>
+  </div>
+  <div class="checkout-btn">
+    <button 
+    [disabled]="isCheckout()"
+    [ngClass]="{btnActBg:!isCheckout()}"
+    (click)="showCheckout()">CHECKOUT</button>
+  </div>
+</div>
